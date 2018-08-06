@@ -23,7 +23,7 @@ local white_bold=$fg_bold[white]
 
 local highlight_bg=$bg[red]
 
-local zeta='ζ'
+local zeta='ζ >'
 
 # Machine name.
 function get_box_name {
@@ -110,7 +110,7 @@ $(get_git_prompt) "
 
 function get_prompt_indicator {
     if [[ $? -eq 0 ]]; then
-        echo "%{$magenta_bold%}$zeta %{$reset_color%}"
+        echo "%{$cyan%}$zeta %{$reset_color%}"
     else
         echo "%{$red_bold%}$zeta %{$reset_color%}"
     fi
